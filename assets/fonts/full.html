@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f2f5;
+        }
+
+        .container {
+            width: 400px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .header {
+            display: block;
+            background-color: #f8f8f8;
+            padding: 10px 0;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+    .navbar ul li img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #2864e8;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .input-box i {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px 10px 10px 35px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            width: auto;
+        }
+
+        .gender {
+            margin-top: 10px;
+        }
+
+        .gender label {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .register {
+            background-color: #2864e8;
+        }
+
+        .reset {
+            background-color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <h2>Student Registration Form</h2>
+
+        <form>
+            <label>Full Name:</label>
+            <div class="input-box">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Enter your full name">
+            </div>
+
+            <label>Email:</label>
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Enter your email">
+            </div>
+
+            <label>Phone Number:</label>
+            <div class="input-box">
+                <i class="fa-solid fa-phone"></i>
+                <input type="tel" placeholder="Enter your phone number">
+            </div>
+
+            <label>Date of Birth:</label>
+            <input type="date">
+
+            <label>Gender:</label>
+            <div class="gender">
+                <label><input type="radio" name="gender"> Male</label>
+                <label><input type="radio" name="gender"> Female</label>
+                <label><input type="radio" name="gender"> Other</label>
+            </div>
+
+            <label>Select Course:</label>
+            <select>
+                <option value="">Choose a course</option>
+                <option>B.Tech</option>
+                <option>BCA</option>
+                <option>BBA</option>
+                <option>MCA</option>
+            </select>
+
+            <label>Address:</label>
+            <textarea rows="4" placeholder="Enter your address"></textarea>
+
+            <label>Upload Photo:</label>
+            <input type="file" accept="image/*">
+
+            <div class="buttons">
+                <button type="submit" class="register">Register</button>
+                <button type="reset" class="reset">Reset</button>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

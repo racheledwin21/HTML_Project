@@ -1,0 +1,92 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout today start</title>
+
+    <style>
+        .grid-container {
+            display: grid;
+
+            background: #2a7b9b;
+            background: linear-gradient(
+                90deg,
+                rgba(42, 123, 155, 1) 0%,
+                rgba(87, 87, 199, 1) 54%,
+                rgba(237, 221, 83, 1) 100%
+            );
+
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            height: 500px;
+        }
+
+        .card {
+            background-color: lightblue;
+            padding: 25px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            text-align: center;
+        }
+
+        /* Accessible keyboard navigation outline */
+        .card:focus-within {
+            outline: 3px solid #0066cc;
+            outline-offset: 4px;
+        }
+
+        /* Squish/Press effect down when clicked */
+        .card:active {
+            transform: scale(0.98);
+        }
+
+        .card img {
+            object-fit: cover;
+            opacity: 1;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            opacity: 0.6;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            background-image: url("images/reset.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <div class="card">
+            <img src="images/reset.jpg" width="400" height="350" alt="Image">
+        </div>
+
+        <div class="card">item 1</div>
+
+        <div class="card">item 1</div>
+
+    </div>
+
+    <div class="hero">
+        <h1>Add Image</h1>
+        <p>hey!</p>
+    </div>
+
+</body>
+</html>
+```

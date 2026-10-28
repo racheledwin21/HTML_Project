@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnTech</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f6fb;
+    color: #333;
+}
+
+header {
+    background: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.logo {
+    color: #3478db;
+    font-size: 23px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.12);
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 22px;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #2864e8;
+}
+
+.hero {
+    background: linear-gradient(rgba(15,40,80,0.65), rgba(35,95,220,0.65)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 85px 20px;
+    transition: background-size 0.5s;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    animation: fadeIn 1s ease;
+}
+
+.hero p {
+    margin-bottom: 24px;
+}
+
+button {
+    background: linear-gradient(45deg, #2864e8, #6595ff);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 18px rgba(40,100,232,0.4);
+}
+
+.courses {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.courses h2 {
+    margin-bottom: 12px;
+    font-size: 26px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    text-align: left;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    border-bottom: 3px solid #4285e8;
+    transition: transform 0.35s, box-shadow 0.35s;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.20);
+}
+
+.card img {
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+.card-content {
+    padding: 18px;
+    background: white;
+    position: relative;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.card p {
+    color: #777;
+    margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.about {
+    text-align: center;
+    padding: 45px 20px;
+    background: linear-gradient(120deg, #dceaff, #ece6ff);
+    transition: box-shadow 0.3s;
+}
+
+.about:hover {
+    box-shadow: inset 0 0 25px rgba(80,100,200,0.12);
+}
+
+.about h2 {
+    margin-bottom: 15px;
+}
+
+.about p {
+    line-height: 1.6;
+}
+
+.contact {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.contact h2 {
+    margin-bottom: 22px;
+}
+
+form {
+    max-width: 320px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background: white;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #3478db;
+    box-shadow: 0 0 9px rgba(52,120,219,0.25);
+}
+
+textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    transition: background 0.3s;
+}
+
+footer:hover {
+    background: #1d3154;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .courses {
+        padding: 35px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">LearnTech</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Learn Skills. Build Your Future.</h1>
+    <p>Start learning web development with our courses.</p>
+    <button onclick="document.getElementById('courses').scrollIntoView({behavior:'smooth'})">
+        Explore Courses
+    </button>
+</section>
+
+<section class="courses" id="courses">
+    <h2>Our Courses</h2>
+    <p class="subtitle">Choose a course and start your learning journey.</p>
+
+    <div class="course-container">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="HTML course">
+            <div class="card-content">
+                <h3>HTML</h3>
+                <p>Learn website structure and HTML tags.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="CSS course">
+            <div class="card-content">
+                <h3>CSS</h3>
+                <p>Design beautiful websites with CSS.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="JavaScript course">
+            <div class="card-content">
+                <h3>JavaScript</h3>
+                <p>Make your websites interactive.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="PHP course">
+            <div class="card-content">
+                <h3>PHP</h3>
+                <p>Learn backend development basics.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>About LearnTech</h2>
+    <p>We help students learn web development through practical examples and projects.</p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="event.preventDefault(); alert('Message submitted successfully!');">
+        <input type="text" placeholder="Enter your name" required>
+        <input type="email" placeholder="Enter your email" required>
+        <textarea placeholder="Enter your message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2026 LearnTech. All Rights Reserved.
+</footer>
+
+</body>
+</html>

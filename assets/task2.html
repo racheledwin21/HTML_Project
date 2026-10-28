@@ -1,0 +1,319 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroHub</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "League Spartan", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0b14;
+            color: white;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #171321;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: #bd83ff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            margin: 10px;
+        }
+
+        .navbar a:hover {
+            color: #bd83ff;
+        }
+
+        .btn {
+            background-color: #873bdb;
+            color: white;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #a35af5;
+        }
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(13, 11, 20, 0.45), rgba(13, 11, 20, 0.45)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 75px 20px;
+    transition: 0.5s;
+}
+
+.hero:hover {
+    background-size: 110%;
+}
+
+.hero:hover {
+    background-size: 110%;
+}
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #bd83ff;
+        }
+
+        .hero p {
+            color: #d0c7df;
+            line-height: 1.7;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 32px;
+        }
+
+        .line {
+            width: 70px;
+            height: 4px;
+            background-color: #a35af5;
+            margin: 15px auto 30px;
+            border-radius: 5px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background-color: #1b1726;
+            border: 1px solid #30243f;
+            border-radius: 14px;
+            overflow: hidden;
+            padding-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            border-color: #873bdb;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            color: white;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #c2b9d0;
+            padding: 0 12px;
+            line-height: 1.5;
+        }
+
+        .price {
+            color: #bd83ff;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        .buy-btn {
+            background-color: #873bdb;
+            color: white;
+            border: none;
+            padding: 11px;
+            width: 85%;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover {
+            background-color: #a35af5;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #171321;
+            color: #c2b9d0;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        /* Laptop and Tablet */
+        @media (max-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+        }
+
+        /* Mobile Phone */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar a {
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .hero {
+                padding: 45px 15px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .products {
+                padding: 30px 15px;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .card img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">⚡ ElectroHub</div>
+
+        <div>
+            <a href="#">Home</a>
+            <a href="#products">Products</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <button class="btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+            Shop Now
+        </button>
+    </div>
+
+    <div class="hero">
+        <h1>Discover the Future of <span>Tech</span></h1>
+
+        <p>
+            Explore our selection of the latest electronic gadgets,<br>
+            from smartphones to smart home devices.
+        </p>
+
+        <button class="btn" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+            Explore Products
+        </button>
+    </div>
+
+    <!-- Products -->
+    <div class="products" id="products">
+        <h2>Featured Products</h2>
+        <div class="line"></div>
+
+        <div class="grid-container">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=500" alt="Smartphone">
+                <h3>Smartphone X</h3>
+                <p>Latest smartphone with a powerful camera and stunning display.</p>
+                <div class="price">$999</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500" alt="Laptop">
+                <h3>Laptop Pro</h3>
+                <p>Powerful and lightweight laptop for work and entertainment.</p>
+                <div class="price">$1499</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Smartwatch">
+                <h3>Smartwatch S</h3>
+                <p>Track your fitness and stay connected every day.</p>
+                <div class="price">$299</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headphones">
+                <h3>Headphones Z</h3>
+                <p>Enjoy immersive sound with noise-cancelling technology.</p>
+                <div class="price">$199</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2026 ElectroHub | All Rights Reserved</p>
+    </div>
+
+</body>
+</html>
+```

@@ -1,0 +1,77 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Designs</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: olive;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 15px;
+            margin: 0;
+            color: black;
+        }
+
+        .container {
+            background-color: #b07e7e;
+            margin: 10px 20px;
+            padding: 16px;
+            min-height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 0;
+        }
+
+        .container img {
+            width: 31%;
+            height: 194px;
+            object-fit: cover;
+        }
+
+        .container img:nth-child(4) {
+            margin-left: 35%;
+        }
+
+        @media (max-width: 600px) {
+            .container img {
+                width: 100%;
+                height: 180px;
+            }
+
+            .container img:nth-child(4) {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>layout designs</h2>
+
+    <div class="container">
+
+        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=600" alt="Night sky">
+
+        <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=600" alt="Red and blue abstract art">
+
+        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=600" alt="Night sky">
+
+        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=600" alt="Night sky">
+
+        <img src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?w=600" alt="Red and blue abstract art">
+
+    </div>
+
+</body>
+</html>
+```

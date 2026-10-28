@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToHoney - Natural Products</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .top-bar {
+            font-size: 12px;
+            padding: 10px 5%;
+        }
+
+        .navbar-brand {
+            color: #bd4b3d;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            font-size: 13px;
+            color: #333;
+        }
+
+        .hero {
+            height: 350px;
+            background: url("https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title span {
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #bd4b3d;
+            margin: 10px auto;
+        }
+
+        .category-card {
+            position: relative;
+        }
+
+        .category-img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+        }
+
+        .category-card h6 {
+            position: absolute;
+            top: 45%;
+            left: 10%;
+            right: 10%;
+            text-align: center;
+            background: #bd4b3d;
+            color: white;
+            padding: 10px;
+        }
+
+        .deal-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+            url("https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=1600&q=80") center/cover;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .product-card h6 {
+            font-size: 14px;
+            margin-top: 12px;
+        }
+
+        .stars {
+            color: #bd4b3d;
+        }
+
+        .discount-section {
+            background: #527b16;
+            color: white;
+            padding: 35px 0;
+        }
+
+        .discount-section img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .testimonial {
+            background: #695c35;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .testimonial img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .newsletter {
+            background: #24292d;
+            color: white;
+            padding: 35px 15px;
+            text-align: center;
+        }
+
+        .contact-section {
+            background: #f8f8f8;
+            padding: 50px 15px;
+        }
+
+        .btn-theme {
+            background: #bd4b3d;
+            color: white;
+            border: 1px solid #bd4b3d;
+        }
+
+        .btn-theme:hover {
+            background: #96382e;
+            color: white;
+        }
+
+        footer {
+            background: #24292d;
+            color: #ddd;
+            padding: 40px 0 15px;
+            font-size: 13px;
+        }
+
+        footer h5 {
+            color: white;
+            font-size: 16px;
+        }
+
+        footer a {
+            display: block;
+            color: #bbb;
+            margin: 8px 0;
+            text-decoration: none;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            font-size: 20px;
+            margin-right: 12px;
+        }
+
+        @media (max-width: 767px) {
+            .hero {
+                height: 280px;
+            }
+
+            .category-img {
+                height: 140px;
+            }
+
+            .product-img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar bg-light d-flex justify-content-between flex-wrap">
+        <span><i class="bi bi-telephone"></i> +91 123 456 7890</span>
+        <span><i class="bi bi-envelope"></i> info@tohoney.com</span>
+        <span><i class="bi bi-person"></i> My Account | USD</span>
+    </div>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#home">ToHoney</a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categories">SHOP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">PRODUCTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#deal">DEAL OF THE DAY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-search"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-heart"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Banner -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Amazing Pure Nut Oil</h2>
+            <p>Discover natural oils and honey products for your everyday needs.</p>
+            <a href="#products" class="btn btn-theme btn-sm">SHOP NOW</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="container py-5" id="categories">
+        <div class="row g-3">
+
+            <div class="col-6 col-md-4">
+                <div class="category-card">
+                    <img class="category-img" src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?auto=format&fit=crop&w=500&q=80" alt="Honey">
+                    <h6>NATURAL HONEY</h6>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4">
+                <div class="category-card">
+                    <img class="category-img" src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=500&q=80" alt="Oil">
+                    <h6>PURE OIL</h6>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4">
+                <div class="category-card">
+                    <img class="category-img" src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=500&q=80" alt="Natural products">
+                    <h6>HONEY PRODUCTS</h6>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Deal of the Day -->
+    <section class="deal-section" id="deal">
+        <div class="container">
+            <h2>Deal Of the Day</h2>
+            <p>Enjoy special offers on our natural products.</p>
+
+            <div class="row mt-4">
+                <div class="col-3"><h3>00</h3><p>Days</p></div>
+                <div class="col-3"><h3>00</h3><p>Hours</p></div>
+                <div class="col-3"><h3>00</h3><p>Minutes</p></div>
+                <div class="col-3"><h3>00</h3><p>Seconds</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="container py-5" id="products">
+        <div class="section-title">
+            <h3>Best Seller</h3>
+            <span></span>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-6 col-md-3">
+                <div class="product-card">
+                    <img class="product-img" src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?auto=format&fit=crop&w=500&q=80" alt="Honey">
+                    <h6>Natural Honey</h6>
+                    <span>$24.00</span>
+                    <span class="stars float-end">★★★★★</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="product-card">
+                    <img class="product-img" src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=500&q=80" alt="Olive oil">
+                    <h6>Olive Oil</h6>
+                    <span>$18.00</span>
+                    <span class="stars float-end">★★★★★</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="product-card">
+                    <img class="product-img" src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=500&q=80" alt="Pure oil">
+                    <h6>Pure Oil</h6>
+                    <span>$20.00</span>
+                    <span class="stars float-end">★★★★★</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="product-card">
+                    <img class="product-img" src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=500&q=80" alt="Coconut oil">
+                    <h6>Coconut Oil</h6>
+                    <span>$15.00</span>
+                    <span class="stars float-end">★★★★★</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Discount Banner -->
+    <section class="discount-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800&q=80" alt="Natural honey">
+                </div>
+
+                <div class="col-md-6 text-center">
+                    <p>AMAZING DEAL</p>
+                    <h2>UPTO 50% OFF</h2>
+                    <a href="#products" class="btn btn-outline-light">SHOP NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Products -->
+    <section class="container py-5">
+        <div class="section-title">
+            <h3>Our Latest Product</h3>
+            <span></span>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-6 col-md-3">
+                <img class="product-img" src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=500&q=80" alt="Oil">
+                <h6>Pure Natural Product</h6>
+                <span>$24.00</span>
+                <span class="stars float-end">★★★★★</span>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <img class="product-img" src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=500&q=80" alt="Oil bottle">
+                <h6>Natural Wellness Product</h6>
+                <span>$20.00</span>
+                <span class="stars float-end">★★★★★</span>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <img class="product-img" src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?auto=format&fit=crop&w=500&q=80" alt="Honey">
+                <h6>Pure Honey Product</h6>
+                <span>$18.00</span>
+                <span class="stars float-end">★★★★★</span>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <img class="product-img" src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=500&q=80" alt="Natural products">
+                <h6>Natural Herbal Product</h6>
+                <span>$22.00</span>
+                <span class="stars float-end">★★★★★</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Customer Review -->
+    <section class="testimonial">
+        <div class="container">
+            <h3>What Our Client Says</h3>
+            <p class="mt-4">"The quality is amazing. I am very happy with these natural products."</p>
+            <h6 class="text-warning">Elizabeth Anne</h6>
+            <p>Customer</p>
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Customer">
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h5>Subscribe Newsletter</h5>
+
+            <div class="d-flex justify-content-center mt-3">
+                <input type="email" id="newsletterEmail" class="form-control w-50" placeholder="Enter your email">
+                <button class="btn btn-theme ms-2" type="button" onclick="subscribe()">
+                    <i class="bi bi-send"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h3>Contact Us</h3>
+                <span></span>
+                <p>Have a question? Send us a message.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4">
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Your Name</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label">Subject</label>
+                                    <input type="text" id="subject" class="form-control" placeholder="Enter subject">
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label">Message</label>
+                                    <textarea id="message" class="form-control" rows="5" placeholder="Write your message"></textarea>
+                                </div>
+
+                                <div class="col-12 text-center">
+                                    <button class="btn btn-theme" type="button" onclick="sendMessage()">
+                                        <i class="bi bi-envelope"></i> Send Message
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <h5>ToHoney</h5>
+                    <p>Natural oils and honey products for everyday needs.</p>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-2">
+                    <h5>Quick Links</h5>
+                    <a href="#home">Home</a>
+                    <a href="#categories">Shop</a>
+                    <a href="#products">Products</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h5>Customer Service</h5>
+                    <a href="#">Shipping Information</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms and Conditions</a>
+                </div>
+
+                <div class="col-md-3">
+                    <h5>Contact Information</h5>
+                    <p><i class="bi bi-geo-alt"></i> Bangalore, India</p>
+                    <p><i class="bi bi-telephone"></i> +91 123 456 7890</p>
+                    <p><i class="bi bi-envelope"></i> info@tohoney.com</p>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="text-center mb-0">&copy; 2026 ToHoney. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript -->
+    <script>
+        function sendMessage() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let subject = document.getElementById("subject").value;
+            let message = document.getElementById("message").value;
+
+            if (name == "" || email == "" || subject == "" || message == "") {
+                alert("Please fill all the details");
+            } else {
+                alert("Thank you " + name + "! Your message has been received.");
+            }
+        }
+
+        function subscribe() {
+            let email = document.getElementById("newsletterEmail").value;
+
+            if (email == "") {
+                alert("Please enter your email");
+            } else {
+                alert("Thank you for subscribing!");
+            }
+        }
+    </script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
